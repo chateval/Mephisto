@@ -8,6 +8,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
+  mode: "development",
   entry: './dev/main.js',
   output: {
     path: __dirname,
