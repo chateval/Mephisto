@@ -1,0 +1,201 @@
+<!-- Bootstrap v3.0.3 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Content -->
+
+<section class="container" id="Other" style="margin-bottom: 15px; padding: 10px; font-family: Verdana, Geneva, sans-serif; font-size: 0.9em;">
+<div class="row col-xs-12 col-md-12" style=""><!-- Instructions -->
+<div class="panel panel-primary" style="">
+<div class="panel-heading"><strong>Instructions - Capturing videos of objects with a cellphone</strong></div>
+
+<div class="panel-body" id="instructions">
+  <div class="instructions_list">
+    <ol>
+      <!--
+      <li>Take an object from one of the following categories: 
+      <ul id="classes_list">
+        <li>Apple
+        <li>Cup
+        <li>Handbag
+        <li>Banana
+      </ul>
+      <li>Place the object on a flat surface (e.g. table).-->
+      <li>Take an apple and place it on a flat surface (e.g. a table).</li>
+      <li>Take your phone and record a video of the object going round it from all sides.
+      <li>Click on <b>Choose file</b> below to select the video from your phone.
+      <li>Click on the <b>Submit</b> button below to finish the HIT.
+    </ol>
+  </div>
+
+  <div class="definitely_avoid">
+    <b>Avoid</b> capturing any <b>people</b> or <b>objects with trademarks</b> (e.g. a Coca-Cola can).</b>
+  </div>
+
+  <div class="instructions_list bonus">
+    <b>For bonus reward:</b>
+    <ul style="margin-top: 0px; margin-bottom: 2px">
+      <li> Print the following QR marks (on letter paper) and put them on the flat surface around the object.
+      <ul>
+        <li><a href="mark_00.pdf">mark1</a>,
+            <a href="mark_01.pdf">mark2</a>,
+            <a href="mark_02.pdf">mark3</a>
+      </ul>
+      <li> Make sure that at least 2 marks are visible at any moment.
+      <li> <font style="color: red"> Do not put two marks of the same type into one video.</font>
+      <li> Please retain the three pieces of paper for possible future tasks.</li>
+    <ul>
+  </div>
+</div>
+</div>
+<!-- End Instructions --><!-- Content Body -->
+
+<section>
+<fieldset>
+<div class="input-group">
+    <label>Video upload:</label>
+    <input type="file" name="video" required="" id="id_video"/>
+    <label>QR codes used?</label>
+    <input type="checkbox" name="qr", id="id_qr"/>
+</div>
+</fieldset>
+</section>
+
+<section id="demos">
+  <div class="examples">
+
+    <h2>Examples of
+        <font color="green">correctly</font> and 
+        <font color="red">wrongly</font>
+        captured videos
+    </h2>
+
+    <p style="margin-bottom: 20px;"></p>
+
+    <h3 style="clear:both; color:green">CORRECTLY captured videos:</h3>
+
+    <div class="example_videos">
+      <div class="video_container good_video"><video autoplay="" class="video_frame" loop="" muted=""><source src="good.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container good_video"><video autoplay="" class="video_frame" loop="" muted=""><source src="good_3.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container good_video"><video autoplay="" class="video_frame" loop="" muted=""><source src="good_4.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container good_video"><video autoplay="" class="video_frame" loop="" muted=""><source src="good_5.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container good_video"><video autoplay="" class="video_frame" loop="" muted=""><source src="good_6.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+    </div>
+    <h3 style="clear:both; color:green">CORRECTLY captured videos with QR codes:</h3>
+    <div style="min-height: 40px;">
+      <div class="video_container good_video"><video autoplay="" class="video_frame" loop="" muted=""><source src="qr_good_2.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container good_video"><video autoplay="" class="video_frame" loop="" muted=""><source src="qr_good.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+    </div>
+    <h3 style="clear:both; color:red">WRONGLY captured videos:</h3>
+
+    <div class="example_videos" id="bad_examples">
+      <div class="video_container bad_video"><div class="video_label_container"><div class="video_label">The object is not captured from all sides.</div></div><video autoplay="" class="video_frame" loop="" muted=""><source src="incomplete_capture.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container bad_video"><div class="video_label_container"><div class="video_label">The object leaves the field of view.</div></div><video autoplay="" class="video_frame" loop="" muted=""><source src="lost_tracking.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container bad_video"><div class="video_label_container"><div class="video_label">Multiple objects in one video.</div></div><video autoplay="" class="video_frame" loop="" muted=""><source src="multiple_objects.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container bad_video"><div class="video_label_container"><div class="video_label">Object is not upright.</div></div><video autoplay="" class="video_frame" loop="" muted=""><source src="non_upright.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container bad_video"><div class="video_label_container"><div class="video_label">Object fell during the capture.</div></div><video autoplay="" class="video_frame" loop="" muted=""><source src="object_fall.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container bad_video"><div class="video_label_container"><div class="video_label">Object got occluded by a different one during the capture.</div></div><video autoplay="" class="video_frame" loop="" muted=""><source src="occlusion.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container bad_video"><div class="video_label_container"><div class="video_label">Object was rotated by hand.</div></div><video autoplay="" class="video_frame" loop="" muted=""><source src="rotate_by_hand.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container bad_video"><div class="video_label_container"><div class="video_label">Too fast motion around the object.</div></div><video autoplay="" class="video_frame" loop="" muted=""><source src="too_fast.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container bad_video"><div class="video_label_container"><div class="video_label">Object has a trademark on it.</div></div><video autoplay="" class="video_frame" loop="" muted=""><source src="trademark.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container bad_video"><div class="video_label_container"><div class="video_label">Object has a trademark on it.</div></div><video autoplay="" class="video_frame" loop="" muted=""><source src="trademark_2.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+    </div>
+    <h3 style="clear:both; color:red">WRONGLY captured videos with QR codes:</h3>
+    <div>
+      <div class="video_container bad_video"><div class="video_label_container"><div class="video_label">QR mark got displaced during capture.</div></div><video autoplay="" class="video_frame" loop="" muted=""><source src="qr_mark_displace.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container bad_video"><div class="video_label_container"><div class="video_label">QR mark got occluded.</div></div><video autoplay="" class="video_frame" loop="" muted=""><source src="qr_occluded.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+      <div class="video_container bad_video"><div class="video_label_container"><div class="video_label">QR mark got occluded.</div></div><video autoplay="" class="video_frame" loop="" muted=""><source src="qr_occluded_v2.mp4" type="video/mp4">Your browser does not support the video tag.</source></video></div>
+    </div>
+
+  </div> <!-- examples -->
+</section><!-- demos-->
+<!-- End Content Body --></div>
+</section>
+
+<style type="text/css">fieldset {
+    padding: 10px;
+    background:#fbfbfb;
+    border-radius:5px;
+    margin-bottom:5px;
+}
+.instructions_list{
+    text-align: left;
+    margin-bottom: 0.5cm;
+    line-height: 1.8em;
+}
+
+#classes_list{
+    font-size: large;
+    font-family: monospace;
+    line-height: 1em;
+    margin-bottom: 0.1cm;
+}
+
+.definitely_avoid{
+    text-align: center;
+    margin-bottom: 0.5cm;
+    color: red;
+}
+
+.submit_form{
+    font-size: large;
+    text-align: center;   
+    margin-bottom: 1cm;
+    margin-top: 1cm;
+}
+
+.submit_button{
+    font-size: x-large;
+}
+
+.examples{
+    text-align: center;   
+}
+
+/*
+.example_videos{
+    min-height: 400px;
+}*/
+
+.video_label_container{
+    position: relative;
+    height: 50px;
+}
+.video_label{
+    width: 192px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.video_container{
+    float:left;
+    width: 192px;
+    margin-left: 15px;
+    margin-right: 15px;
+    /* height: 180px; */
+    margin-bottom: 20px;
+}
+
+.good_video{
+    border:2px solid green;
+}
+
+.bad_video{
+    border:2px solid red;
+}
+
+.bonus{
+    padding-left: 5px;
+    border:1px solid lightgray;
+    margin-bottom: 0px;
+}
+
+.video_frame{
+    width: 192px;
+    height: 108px;
+}
+</style>
