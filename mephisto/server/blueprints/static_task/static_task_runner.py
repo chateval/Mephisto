@@ -38,6 +38,7 @@ class StaticTaskRunner(TaskRunner):
         """
         Return the data for an agent already assigned to a particular unit
         """
+        # XXX good place to throw
         init_state = agent.state.get_init_state()
         if init_state is not None:
             # reconnecting agent, give what we've got

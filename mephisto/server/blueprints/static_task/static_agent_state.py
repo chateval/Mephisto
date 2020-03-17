@@ -71,7 +71,7 @@ class StaticAgentState(AgentState):
         os.makedirs(data_dir, exist_ok=True)
         with open(os.path.join(data_dir, DATA_FILE), "w+") as data_file:
             json.dump(self.state, data_file)
-        print("SAVED_DATA_TO_DISC", self.state)
+        print("SAVED_DATA_TO_DISC", str(self.state)[:400])
 
     def update_data(self, packet: "Packet") -> None:
         """
