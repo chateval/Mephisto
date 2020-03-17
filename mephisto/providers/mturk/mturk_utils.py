@@ -317,18 +317,17 @@ def create_hit_type(
                 has_locale_qual = True
         locale_requirements += qualifications
 
-    if not has_locale_qual:
+    #from https://our.internmc.facebook.com/intern/wiki/Facebook_Research/Working_With_Mechanical_Turk/
+    states = "AL, AR, DE, FL, GA, IA, KS, KY, LA, MD, MN, MS, MO, NE, ND, OK, SC, SD, TN, TX, VA, WV"
+    states = states.split(", ")
+    default_locales = [{"Country": "US", "Subdivision": s} for s in states]
+
+    if not has_locale_qual and "SKIP_LOCALE_REQUIREMENT" not in os.environ:
         locale_requirements.append(
             {
                 "QualificationTypeId": MTURK_LOCALE_REQUIREMENT,
                 "Comparator": "In",
-                "LocaleValues": [
-                    {"Country": "US"},
-                    {"Country": "CA"},
-                    {"Country": "GB"},
-                    {"Country": "AU"},
-                    {"Country": "NZ"},
-                ],
+                "LocaleValues": default_locales,
                 "RequiredToPreview": True,
             }
         )
