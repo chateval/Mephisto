@@ -4,14 +4,15 @@ import shlex
 from mephisto.core.local_database import LocalMephistoDB
 from mephisto.core.operator import Operator
 
-USE_LOCAL = 1
-NO_SANDBOX = 0
-os.environ["SKIP_LOCALE_REQUIREMENT"]="TRUE"
+USE_LOCAL = 0
+NO_SANDBOX = 1
+if not NO_SANDBOX:
+    os.environ["SKIP_LOCALE_REQUIREMENT"]="TRUE"
 
 db = LocalMephistoDB()
 
 #db.new_requester("NoahTurkProject.1024@gmail.com_sandbox", "mturk_sandbox")
-#db.new_requester("NoahTurkProject.1024@gmail.com", "mock")
+#db.new_requester("NoahTurkProject.1024@gmail.com_mock", "mock")
 #db.new_requester("NoahTurkProject.1024@gmail.com", "mturk")
 #Mock never completes properly - you can't test seeing worker id
 
@@ -31,8 +32,8 @@ ARG_STRING = (
     f"--architect-type {architect_type} "
     f"--requester-name {requester_name} "
     '--task-title "\\"Fruit video task (best done on mobile phone)\\"" '
-    '--task-description "\\"Take a video of an apple from all sides.\\"" '
-    "--task-reward 1.2 "
+    '--task-description "\\"Take a video of an orange from all sides.\\"" '
+    "--task-reward 1.5 "
     "--task-tags static,task,testing "
     '--data-csv "data.csv" '
     '--assignment-duration-seconds 18000 ' # max time for a worker to complete.
