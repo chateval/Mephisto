@@ -41,7 +41,8 @@ ARG_STRING = (
     #'--allow-mobile required '
     '--extra-source-dir payload '
     #'--html-source "task.html" '
-    f"--units-per-assignment 10 "    
+    f"--units-per-assignment 10 "
+    '--use-hobby True '
 )
 
 try:

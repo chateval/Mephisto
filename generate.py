@@ -15,7 +15,7 @@ def video(ok, msg, video):
         label=ET.SubElement(label_cont, "div", attrib={"class": "video_label"})
         label.text = msg
     vid = ET.SubElement(
-        xml, "video", {"muted": "", "loop": "", "autoplay": "", "class": "video_frame"}
+        xml, "video", {"autoplay": "", "class": "video_frame", "loop": "", "muted": ""}
     )
     src = ET.SubElement(vid, "source", {"src": path, "type": "video/mp4"})
     src.text = "Your browser does not support the video tag."
