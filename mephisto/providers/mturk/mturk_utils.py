@@ -583,3 +583,12 @@ def email_worker(
         return (False, failure_message["NotifyWorkersFailureMessage"])
     else:
         return (True, "")
+
+def get_all_hits(client: MTurkClient):
+    """ Get all HITs on the MTurk server """
+    print('Getting all HITs (might take some time) ...')
+    hits = []
+    hits = client.get_paginator(
+        'list_hits').paginate(
+            PaginationConfig={'PageSize': 100}).build_full_result()
+    return hits['HITs']
